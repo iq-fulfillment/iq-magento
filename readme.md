@@ -4,6 +4,12 @@ This Magento module provides an integration with IQFulfillment, allowing you to 
 
 ## Installation
 * Go to your server.
+* Run command:
+```
+composer require iq-fulfillment/magento-integration
+```
+or
+* Go to your server.
 * Unzip the file in app > code directory.
 * Run command:
 ```
