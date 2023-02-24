@@ -1,0 +1,31 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_product_save_after">
+        <observer name="catalog_product_save_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\ProductCreateRequest"/>
+    </event>
+    <event name="catalog_product_save_commit_after">
+        <observer name="catalog_product_save_commit_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\ProductUpdateRequest"/>
+    </event>
+    <event name="catalog_product_delete_after">
+        <observer name="catalog_product_delete_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\ProductDeleteRequest"/>
+    </event>
+    <event name="checkout_submit_all_after">
+        <observer name="checkout_submit_all_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\OrderCreateRequest"/>
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="sales_order_save_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\OrderUpdateRequest"/>
+    </event>
+    <event name="order_cancel_after">
+        <observer name="sales_order_cancel_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\OrderCancelRequest"/>
+    </event>
+    <event name="sales_order_delete_after">
+        <observer name="sales_order_delete_after_observer"
+                  instance="IQFulfillment\Magento2Integration\Observer\OrderDeleteRequest"/>
+    </event>
+</config>

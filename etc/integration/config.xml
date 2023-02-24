@@ -1,0 +1,7 @@
+<integrations>
+    <integration name="IQFulfillmentMagentoIntegration">
+        <email>info@iqfulfillment.com</email>
+        <endpoint_url>https://iqintegrate.com/datahub/v1/magento-20/auth/integration</endpoint_url>
+        <identity_link_url>https://iqintegrate.com/datahub/v1/magento-20/auth/callback</identity_link_url>
+    </integration>
+</integrations>

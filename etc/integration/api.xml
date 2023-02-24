@@ -1,0 +1,20 @@
+<integrations>
+    <integration name="IQFulfillmentMagentoIntegration">
+        <resources>
+            <resource name="Magento_Backend::dashboard"/>
+            <resource name="Magento_Analytics::analytics"/>
+            <resource name="Magento_Analytics::analytics_api"/>
+            <resource name="Magento_Sales::sales"/>
+            <resource name="Magento_Sales::sales_operation"/>
+            <resource name="Magento_Sales::sales_order"/>
+            <resource name="Magento_Sales::actions"/>
+            <resource name="Magento_Sales::create"/>
+            <resource name="Magento_Sales::actions_view"/>
+            <resource name="Magento_Sales::actions_edit"/>
+            <resource name="Magento_Catalog::catalog"/>
+            <resource name="Magento_Catalog::catalog_inventory"/>
+            <resource name="Magento_Catalog::products"/>
+            <resource name="Magento_Catalog::categories"/>
+        </resources>
+    </integration>
+</integrations>

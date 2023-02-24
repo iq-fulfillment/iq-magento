@@ -1,0 +1,22 @@
+{
+    "name": "iqfulfillment/magento-integration",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IQFulfillment",
+            "email": "integrations@iqfulfillment.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "~8.1.0"
+    },
+	"version": "1.0.0",
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "IQFulfillment\\Magento2Integration\\": ""
+        }
+	}
+}
