@@ -7,6 +7,7 @@ use IQFulfillment\Magento2Integration\Helper\IQRequestHandler;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Framework\HTTP\Client\Curl;
 use Magento\Integration\Model\IntegrationFactory;
 use Magento\Store\Model\StoreManagerInterface;
 
@@ -17,6 +18,12 @@ class OrderUpdateRequest implements ObserverInterface
      * @var StoreManagerInterface $storeManager
      */
     protected $storeManager;
+
+    /**
+     *
+     * @var Curl $curlClient
+     */
+    protected $curlClient;
 
     /**
      *
@@ -33,11 +40,14 @@ class OrderUpdateRequest implements ObserverInterface
     /**
      * @param StoreManagerInterface $storeManager
      * @param IntegrationFactory $integrationFactory
+     * @param Curl $curl
      */
-    public function __construct(StoreManagerInterface $storeManager, IntegrationFactory $integrationFactory)
+    public function __construct(StoreManagerInterface $storeManager, IntegrationFactory $integrationFactory, Curl $curl)
     {
         $this->storeManager = $storeManager;
-        $this->is_active_integration = IQIntegrationCheck::index($integrationFactory);
+        $integration_check = new IQIntegrationCheck($integrationFactory);
+        $this->is_active_integration = $integration_check->index();
+        $this->curlClient = $curl;
     }
 
     /**
