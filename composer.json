@@ -1,5 +1,5 @@
 {
-    "name": "iqfulfillment/magento-integration",
+    "name": "iq-fulfillment/magento2integration",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
